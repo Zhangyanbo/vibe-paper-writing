@@ -2,7 +2,7 @@
 
 An Agent Skill that brings the fluid, conversational style of **Vibe Coding** to academic paper writing. Send it a chat log, email thread, or a voice-note dump—and it integrates the ideas into your LaTeX paper with proper scholarly prose, automatically.
 
-Compatible with **Cursor**, **Claude Code**, and **Codex (OpenAI)**.
+Compatible with **Cursor**, **Claude Code**, **Codex (OpenAI)**, and **GitHub Copilot**.
 
 ---
 
@@ -53,6 +53,34 @@ Alternatively, use the built-in skill installer inside Codex:
 
 ```
 $skill-installer install https://github.com/Zhangyanbo/vibe-paper-writing
+```
+
+### GitHub Copilot
+
+Agent Skills work with **GitHub Copilot coding agent**, **Copilot CLI**, and **agent mode in VS Code** (Insiders; stable support coming soon). See the [official VS Code docs](https://code.visualstudio.com/docs/copilot/customization/agent-skills) and [GitHub Copilot docs](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/create-skills) for details.
+
+**Personal skill (shared across all your projects):**
+
+```bash
+git clone https://github.com/Zhangyanbo/vibe-paper-writing ~/.copilot/skills/vibe-paper-writing
+```
+
+**Project skill (for a single repository):**
+
+```bash
+git clone https://github.com/Zhangyanbo/vibe-paper-writing .github/skills/vibe-paper-writing
+```
+
+After cloning, type `/skills` in the VS Code Copilot Chat panel to verify the skill is loaded. You can then invoke it directly with `/vibe-paper-writing` or let Copilot load it automatically based on your prompt.
+
+If you keep your skills in a non-standard location, add it to VS Code's `settings.json`:
+
+```json
+{
+  "chat.agentSkillsLocations": {
+    "/path/to/your/skills/**": true
+  }
+}
 ```
 
 ---

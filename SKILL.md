@@ -23,6 +23,7 @@ When the user provides materials to incorporate, identify the task type and load
 | Mathematical notation | Writing or checking math expressions and symbols | `tasks/math-notation.md` |
 | Paper review | Checking for contradictions, consistency, references, and privacy | `tasks/paper-review.md` |
 | Writing improvement | Linearizing logic, enforcing abbreviation policy, moving content to appendix | `tasks/writing-improvement.md` |
+| Upgrade | Update the skill to the latest version from GitHub | `tasks/upgrade.md` |
 
 ---
 

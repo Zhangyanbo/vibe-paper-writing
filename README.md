@@ -85,6 +85,36 @@ If you keep your skills in a non-standard location, add it to VS Code's `setting
 
 ---
 
+## Upgrading
+
+Because the skill is a git repository, upgrading to the latest version is a single command. Run it from inside the skill's directory, or let the agent do it for you.
+
+**Manual upgrade:**
+
+```bash
+# Claude Code (global)
+git -C ~/.claude/skills/vibe-paper-writing pull
+
+# Cursor (global)
+git -C ~/.cursor/skills/vibe-paper-writing pull
+
+# Codex (global)
+git -C ~/.agents/skills/vibe-paper-writing pull
+
+# GitHub Copilot (global)
+git -C ~/.copilot/skills/vibe-paper-writing pull
+```
+
+**Agent-assisted upgrade:**
+
+Just tell the agent:
+
+> "Upgrade the vibe-paper-writing skill."
+
+The agent will locate the skill directory, run `git pull`, and report which files changed and which version is now active.
+
+---
+
 ## Usage
 
 Once installed, just describe what you want in natural language:
